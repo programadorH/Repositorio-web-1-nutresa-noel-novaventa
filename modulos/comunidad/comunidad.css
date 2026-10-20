@@ -1,7 +1,7 @@
 .valoracion {
-  --estrella-activa: #F1C85C; /* Amarillo del kit de marca (relleno) */
-  --estrella-borde: #3F4040;  /* Gris texto del kit de marca (contorno) */
-  --estrella-foco: #215B33;   /* Verde Nutresa */
+  --estrella-activa: #F1C85C; 
+  --estrella-borde: #3F4040;  
+  --estrella-foco: #215B33;   
 }
  
 .estrellas {
@@ -38,3 +38,4 @@
 .puntuacion {
   margin: 0.5rem 0 0;
 }
+

@@ -14,5 +14,17 @@
     }
   }
 
+  let calificacion = 0;
+
+  const pintarEstrellas = (estrellas, valor) => {
+    estrellas.forEach((estrella) => {
+      const valorEstrella = Number(estrella.dataset.valor);
+      estrella.classList.toggle("activa", valorEstrella <= valor);
+    });
+  };
+
+
+
   document.addEventListener("DOMContentLoaded", iniciarComunidad);
+  document.addEventListener("DOMContentLoaded", iniciarEstrellas);
 })();
