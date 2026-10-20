@@ -5,21 +5,51 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Sazón · Comunidad</title>
   <link rel="stylesheet" href="../../assets/css/sazon.css">
+  <link rel="stylesheet" href="comunidad.css">
 </head>
 <body>
   <header data-layout="header"></header>
   <main class="contenedor pagina-modulo">
+
     <section class="bloque-modulo">
       <h1>Módulo Comunidad</h1>
       <p>Base lista para desarrollar historias de usuario de comunidad.</p>
       <div id="comunidad-estado" class="mensaje-estado" role="status"></div>
     </section>
+
+    <section class="bloque-modulo valoracion" aria-labelledby="valoracion-titulo">
+      <h2 id="valoracion-titulo">Califica esta receta</h2>
+
+      <div class="estrellas" id="estrellas" role="group" aria-label="Calificación de la receta">
+        <button type="button" class="estrella" data-valor="1" aria-label="Calificar con 1 estrella">
+          <span class="estrella-icono" aria-hidden="true">★</span>
+        </button>
+        <button type="button" class="estrella" data-valor="2" aria-label="Calificar con 2 estrellas">
+          <span class="estrella-icono" aria-hidden="true">★</span>
+        </button>
+        <button type="button" class="estrella" data-valor="3" aria-label="Calificar con 3 estrellas">
+          <span class="estrella-icono" aria-hidden="true">★</span>
+        </button>
+        <button type="button" class="estrella" data-valor="4" aria-label="Calificar con 4 estrellas">
+          <span class="estrella-icono" aria-hidden="true">★</span>
+        </button>
+        <button type="button" class="estrella" data-valor="5" aria-label="Calificar con 5 estrellas">
+          <span class="estrella-icono" aria-hidden="true">★</span>
+        </button>
+      </div>
+
+      <p id="puntuacion-texto" class="puntuacion" aria-live="polite">Sin calificar</p>
+
+    </section>
+
   </main>
+
   <footer data-layout="footer"></footer>
   <script src="../../services/api.config.js"></script>
   <script src="../../assets/js/layout.js"></script>
   <script src="servicio.js"></script>
   <script src="index.js"></script>
+  
 </body>
 </html>
 
