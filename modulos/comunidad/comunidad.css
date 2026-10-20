@@ -1,0 +1,96 @@
+.sazon-rating-card {
+  max-width: 440px;
+  margin: 1.5rem auto;
+  padding: 1.75rem;
+  background-color: #ffffff;
+  border-radius: 14px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  font-family: inherit;
+  color: #2d3748;
+}
+
+.rating-header h3 {
+  margin: 0 0 0.5rem 0;
+  color: #c05621; /* Tono cálido Sazón */
+  font-size: 1.35rem;
+}
+
+.rating-header p {
+  margin: 0;
+  color: #718096;
+  font-size: 0.9rem;
+}
+
+.rating-overview {
+  text-align: center;
+  padding: 1.25rem 0;
+  border-bottom: 1px solid #edf2f7;
+}
+
+.average-score {
+  font-size: 2.8rem;
+  font-weight: 800;
+  color: #2d3748;
+}
+
+.max-score {
+  font-size: 1.1rem;
+  color: #a0aec0;
+}
+
+.stars-display {
+  font-size: 1.5rem;
+  color: #ecc94b;
+  margin: 0.25rem 0;
+}
+
+.votes-counter {
+  margin: 0;
+  font-size: 0.85rem;
+  color: #718096;
+}
+
+.interactive-rating {
+  margin-top: 1.25rem;
+  text-align: center;
+}
+
+.cta-text {
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.star-rating {
+  display: flex;
+  justify-content: center;
+  gap: 0.35rem;
+}
+
+.star-btn {
+  background: none;
+  border: none;
+  font-size: 2.2rem;
+  color: #cbd5e0;
+  cursor: pointer;
+  padding: 0;
+  line-height: 1;
+  transition: transform 0.15s ease, color 0.15s ease;
+}
+
+.star-btn:hover {
+  transform: scale(1.2);
+}
+
+.star-btn.is-active,
+.star-btn.is-hover {
+  color: #f6ad55;
+}
+
+.feedback-msg {
+  min-height: 1.25rem;
+  font-size: 0.85rem;
+  color: #38a169;
+  font-weight: 600;
+  margin-top: 0.75rem;
+}
