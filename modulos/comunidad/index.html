@@ -14,6 +14,32 @@
       <p>Base lista para desarrollar historias de usuario de comunidad.</p>
       <div id="comunidad-estado" class="mensaje-estado" role="status"></div>
     </section>
+    <div class="sazon-rating-card" id="sazonRatingCard">
+  <header class="rating-header">
+    <h3>Valoraciones de la Comunidad</h3>
+    <p>¿Preparaste esta receta? Comparte tu opinión con la comunidad.</p>
+  </header>
+  <div class="rating-overview">
+    <div class="score-container">
+      <span class="average-score" id="averageScore">0.0</span>
+      <span class="max-score">/ 5.0</span>
+    </div>
+    <div class="stars-display" id="averageStars"></div>
+    <p class="votes-counter" id="votesCounter">Cargando votos...</p>
+  </div>
+
+  <div class="interactive-rating">
+    <p class="cta-text">Toca una estrella para calificar:</p>
+    <div class="star-rating" id="starInputGroup" role="radiogroup" aria-label="Calificar del 1 al 5">
+      <button type="button" class="star-btn" data-value="1" aria-label="1 estrella">★</button>
+      <button type="button" class="star-btn" data-value="2" aria-label="2 estrellas">★</button>
+      <button type="button" class="star-btn" data-value="3" aria-label="3 estrellas">★</button>
+      <button type="button" class="star-btn" data-value="4" aria-label="4 estrellas">★</button>
+      <button type="button" class="star-btn" data-value="5" aria-label="5 estrellas">★</button>
+    </div>
+    <p class="feedback-msg" id="feedbackMsg" aria-live="polite"></p>
+  </div>
+</div>
   </main>
   <footer data-layout="footer"></footer>
   <script src="../../services/api.config.js"></script>
