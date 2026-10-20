@@ -23,7 +23,23 @@
     });
   };
 
+  const iniciarEstrellas = () => {
+    const contenedorDiv = document.querySelector("#estrellas");
+    const valorTexto = document.querySelector("#puntuacion-texto");
+    if (!contenedorDiv || !valorTexto) {
+      return;
+    }
 
+    const estrellas = contenedorDiv.querySelectorAll(".estrella");
+
+    estrellas.forEach((estrella) => {
+      estrella.addEventListener("click", () => {
+        calificacion = Number(estrella.dataset.valor);
+        pintarEstrellas(estrellas, calificacion);
+        valorTexto.textContent = calificacion + " de 5";
+      });
+    });
+  };
 
   document.addEventListener("DOMContentLoaded", iniciarComunidad);
   document.addEventListener("DOMContentLoaded", iniciarEstrellas);
