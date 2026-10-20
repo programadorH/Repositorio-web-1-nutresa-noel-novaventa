@@ -4,18 +4,42 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Sazón · Comunidad</title>
+
   <link rel="stylesheet" href="../../assets/css/sazon.css">
+  <link rel="stylesheet" href="./comunidad.css">
 </head>
 <body>
   <header data-layout="header"></header>
+
   <main class="contenedor pagina-modulo">
     <section class="bloque-modulo">
       <h1>Módulo Comunidad</h1>
-      <p>Base lista para desarrollar historias de usuario de comunidad.</p>
-      <div id="comunidad-estado" class="mensaje-estado" role="status"></div>
+      <p>Comparte tus gustos y organiza tus recetas favoritas.</p>
+
+      <h2>Recetas disponibles</h2>
+      <div id="lista-recetas" class="lista-recetas"></div>
+
+      <section class="seccion-favoritos">
+        <h2>♥ Mis favoritos</h2>
+        <p>Las recetas que guardes aparecerán aquí.</p>
+
+        <div id="lista-favoritos" class="lista-recetas"></div>
+      </section>
+
+      <div
+        id="comunidad-estado"
+        class="mensaje-estado"
+        role="status"
+        aria-live="polite"
+      >
+        <span id="mensaje-comunidad"></span>
+      </div>
+
     </section>
   </main>
+
   <footer data-layout="footer"></footer>
+
   <script src="../../services/api.config.js"></script>
   <script src="../../assets/js/layout.js"></script>
   <script src="servicio.js"></script>
