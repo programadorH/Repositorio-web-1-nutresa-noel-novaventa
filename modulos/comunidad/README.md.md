@@ -18,10 +18,10 @@ Desarrollar la sección visual y lógica en JavaScript imperativo (Vanilla JS) q
 #### **Criterios de aceptación:**
 1. **Representación del valor:** Cada una de las cinco estrellas porta su valor (1 a 5) en un atributo `data-valor`, que el código lee mediante `dataset` y convierte a número. El estado inicial es sin calificación (valor `0`).
 2. **Manipulación del DOM imperativa:** La selección de elementos se realiza estrictamente con `document.querySelector` y `document.querySelectorAll`, y la interacción con `addEventListener('click', ...)`, sin librerías ni frameworks.
-3. **Comportamiento de la selección:** Al hacer click en la estrella *n*, las estrellas de la 1 a la *n* se marcan en amarillo (`bi-star-fill`) y las restantes quedan vacías (`bi-star`). Un nuevo click en otra estrella reemplaza la selección y no la acumula.
+3. **Comportamiento de la selección:** Al hacer click en la estrella *n*, las estrellas de la 1 a la *n* se marcan en amarillo (clase `activa`, estrella rellena) y las restantes quedan vacías (solo contorno). Un nuevo click en otra estrella reemplaza la selección y no la acumula.
 4. **Visualización de la puntuación:** La puntuación elegida se muestra en pantalla con el formato "*n* de 5", actualizada mediante `textContent`.
-5. **Estructura y maquetación:** Marcado semántico con cinco elementos `<button type="button">` dentro de un contenedor propio, con el ícono de Bootstrap Icons y un `aria-label` descriptivo en cada uno (por ejemplo, "Calificar con 4 estrellas").
-6. **Estilos e integración modular:** `assets/css/sazon.css` se mantiene intacto. El color amarillo de la estrella marcada (`#F1C85C`, del kit de marca) y cualquier ajuste visual se definen en `modulos/comunidad/comunidad.css`, importado desde `modulos/comunidad/index.html`.
+5. **Estructura y maquetación:** Marcado semántico con cinco elementos `<button type="button">` dentro de un contenedor propio, con el carácter `★` como ícono decorativo (`aria-hidden`) y un `aria-label` descriptivo en cada uno (por ejemplo, "Calificar con 4 estrellas").
+6. **Estilos e integración modular:** `assets/css/sazon.css` se mantiene intacto y no se usan librerías externas de CSS ni de íconos. El color amarillo de la estrella marcada (`#F1C85C`, del kit de marca) y cualquier ajuste visual se definen en `modulos/comunidad/comunidad.css`, importado desde `modulos/comunidad/index.html`.
 7. **Scripts clásicos y alcance del código:** La lógica vive en `modulos/comunidad/index.js`, cargado con `<script src>` sin `import`/`export`, y se encapsula en una función para no contaminar el ámbito global.
 
 #### **Fuera de alcance (HU siguientes):**
