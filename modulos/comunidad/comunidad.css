@@ -1,0 +1,169 @@
+@import url('../../assets/css/sazon.css');
+
+.btn-favorito {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background-color: var(--hoja);
+    border: none;
+    border-radius: 8px;
+    padding: 10px 14px;
+    cursor: pointer;
+    font-size: 16px;
+    color: white;
+}
+
+#icono-favorito {
+    color: #d1d5db;
+    font-size: 24px;
+    transition: color 0.2s ease;
+}
+
+#comunidad-estado {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.btn-favorito:hover {
+    filter: brightness(0.92);
+}
+
+.btn-favorito:focus-visible {
+    outline: 2px solid var(--rojo);
+    outline-offset: 3px;
+}
+
+.tarjeta-receta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  margin-top: 20px;
+  padding: 16px;
+  border: 1px solid var(--crema-2);
+  border-radius: 10px;
+  background: #fff;
+}
+
+.receta-info h2 {
+  margin: 0 0 6px;
+  font-size: 20px;
+}
+
+.receta-info p {
+  margin: 0;
+  color: #6b7280;
+}
+
+.btn-favorito {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 14px;
+  border: none;
+  border-radius: 8px;
+  background: #398b35;
+  color: white;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+#icono-favorito {
+  color: #d1d5db;
+  font-size: 20px;
+}
+
+.lista-recetas {
+  display: grid;
+  gap: 14px;
+  margin: 18px 0 28px;
+}
+
+.tarjeta-receta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 18px;
+  background: #fff;
+  border: 1px solid #e5e1cf;
+  border-radius: 12px;
+}
+
+.receta-info h3 {
+  margin: 0 0 8px;
+  color: #344052;
+}
+
+.receta-info p {
+  margin: 0;
+  color: #687385;
+}
+
+.btn-favorito {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  padding: 11px 15px;
+  border: 1px solid #287a3c;
+  border-radius: 9px;
+  background: #fff;
+  color: #287a3c;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn-favorito:hover {
+  background: #edf6e8;
+}
+
+.btn-favorito.es-favorito {
+  background: #32843a;
+  color: #fff;
+}
+
+.seccion-favoritos {
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid #dedbc9;
+}
+
+.seccion-favoritos h2 {
+  color: #17613c;
+}
+
+.favoritos-vacios {
+  padding: 20px;
+  border: 1px dashed #c9cbb7;
+  border-radius: 10px;
+  color: #687385;
+  text-align: center;
+}
+
+.mensaje-estado {
+  margin-top: 18px;
+  padding: 14px;
+  border-radius: 9px;
+  background: #edf5e5;
+  color: #17613c;
+}
+
+.mensaje-estado.estado-error {
+  background: #fff0ed;
+  color: #a52c20;
+}
+
+@media (max-width: 600px) {
+  .tarjeta-receta {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .btn-favorito {
+    width: 100%;
+  }
+}
