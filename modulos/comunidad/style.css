@@ -1,0 +1,254 @@
+/* ==========================================================================
+   styles.css - Hoja de estilos de la Célula 6 (Comunidad y Valoraciones)
+   Basada en el Kit de Marca de Sa-zón (https://sazon-ten.vercel.app/)
+   ========================================================================== */
+:root {
+  --verde-noche: #114622;
+  --verde-hondo: #215B33;
+  --verde: #3D8E33;
+  --hoja: #7FBA00;
+  --teal: #569E8F;
+  --rojo: #D6121A;
+  --rojo-hondo: #8A0A0F;
+  --tinta: #2A1605;
+  --texto: #3F4040;
+  --texto-2: #5B5E60;
+  --gris: #989898;
+  --crema: #F4F4E8;
+  --crema-2: #E9E8D7;
+  --card: #FFFFFF;
+  --linea: #DAD9C4;
+  --amarillo: #F1C85C;
+
+  --font-display: "Poppins", system-ui, sans-serif;
+  --font-body: "Inter", system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", monospace;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--crema);
+  color: var(--texto);
+}
+
+/* Encabezado superior de la vista */
+.comunidad-page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  gap: 1rem;
+  background: var(--card);
+  padding: 1.25rem 1.5rem;
+  border-radius: 14px;
+  border: 1px solid var(--linea);
+}
+
+.comunidad-tag-celula {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--verde-hondo);
+  letter-spacing: 0.05em;
+  display: block;
+}
+
+.comunidad-titulo-principal {
+  font-family: var(--font-display);
+  font-size: 1.45rem;
+  font-weight: 700;
+  color: var(--tinta);
+  margin: 0.2rem 0;
+}
+
+.comunidad-subtitulo {
+  font-size: 0.88rem;
+  color: var(--texto-2);
+}
+
+.comunidad-select {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  border-color: var(--linea);
+  width: auto;
+}
+
+.btn-sazon-lima {
+  background-color: var(--hoja);
+  color: var(--tinta);
+  font-weight: 600;
+  border-radius: 999px;
+  padding: 0.35rem 1rem;
+  border: none;
+}
+
+.btn-sazon-lima:hover {
+  background-color: var(--verde);
+  color: #ffffff;
+}
+
+/* Marco de la aplicación (.app-frame, .app-bar, .app-screen) */
+.app-frame {
+  background: var(--card);
+  border: 1px solid var(--linea);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 26px rgba(42, 22, 5, 0.06);
+}
+
+.app-bar {
+  background: var(--crema-2);
+  border-bottom: 1px solid var(--linea);
+  padding: 0.6rem 1.15rem;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--texto-2);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.app-screen {
+  padding: 1.35rem;
+  background: var(--crema);
+}
+
+.comunidad-receta-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: var(--card);
+  padding: 0.85rem 1.1rem;
+  border-radius: 12px;
+  border: 1px solid var(--linea);
+}
+
+.avatar-placeholder {
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
+  background: var(--crema-2);
+  border: 1px solid var(--linea);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  flex-shrink: 0;
+}
+
+.mk-star {
+  color: var(--amarillo);
+  letter-spacing: 1px;
+}
+
+/* CRITERIO #2: Tarjetas semánticas con clases prefijadas (.comunidad-comentario-card) */
+.comunidad-comentarios-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.9rem;
+}
+
+.comunidad-comentario-card,
+.mk-card {
+  background: var(--card);
+  border: 1px solid var(--linea);
+  border-radius: 12px;
+  padding: 1rem 1.15rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+  transition: transform 0.15s ease, border-color 0.15s ease;
+}
+
+.comunidad-comentario-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--teal);
+}
+
+.comunidad-comentario-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.comunidad-comentario-usuario {
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--tinta);
+  margin: 0;
+}
+
+.comunidad-comentario-estrellas {
+  font-size: 0.9rem;
+  color: var(--amarillo);
+}
+
+.comunidad-comentario-texto {
+  font-size: 0.88rem;
+  color: var(--texto);
+  line-height: 1.55;
+  margin: 0;
+}
+
+.comunidad-comentario-fecha {
+  font-size: 0.75rem;
+  color: var(--gris);
+}
+
+/* Barras de carga (.skel originales de Sa-zón) */
+.skel {
+  height: 10px;
+  background: var(--crema-2);
+  border-radius: 6px;
+  animation: pulso-skel 1.2s infinite ease-in-out;
+}
+
+@keyframes pulso-skel {
+  0%, 100% { opacity: 0.5; }
+  50% { opacity: 1; }
+}
+
+.comunidad-alerta-error {
+  background: #fef2f2;
+  color: var(--rojo-hondo);
+  border: 1px solid #f5c2c7;
+  padding: 0.85rem 1rem;
+  border-radius: 10px;
+  font-size: 0.88rem;
+  margin-bottom: 1rem;
+}
+
+/* CRITERIO #4: Diseño Responsive en múltiples resoluciones */
+@media (max-width: 768px) {
+  .comunidad-comentarios-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .comunidad-page-header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+
+@media (max-width: 480px) {
+  .app-screen {
+    padding: 0.9rem;
+  }
+
+  .comunidad-receta-header {
+    flex-wrap: wrap;
+  }
+
+  .comunidad-receta-header .btn {
+    width: 100%;
+    margin-top: 0.4rem;
+  }
+
+  .comunidad-comentario-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
