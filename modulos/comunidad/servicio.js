@@ -1,7 +1,7 @@
 // GET
 const consultarApi = async () => {
     try {
-        const respuesta = await fetch("6ada66727512f497b3ffeb23.mockapi.io/api/v1/fotos");
+        const respuesta = await fetch("https://6ada66727512f497b3ffeb23.mockapi.io/api/v1/fotos");
         if (!respuesta.ok) {
             throw new Error(`Error de red: ${respuesta.status}`);
         }
@@ -17,7 +17,7 @@ const consultarApi = async () => {
 // POST (envía el comentario con la foto)
 const enviarComentarioApi = async (comentario) => {
     try {
-        const respuesta = await fetch("6ada66727512f497b3ffeb23.mockapi.io/api/v1/fotos", {
+        const respuesta = await fetch("https://6ada66727512f497b3ffeb23.mockapi.io/api/v1/fotos", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(comentario)
